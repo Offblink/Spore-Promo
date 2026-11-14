@@ -131,3 +131,13 @@ npm run dev        :: = remotion studio src/index.ts，浏览器里逐镜头预�
 - 镜头文件里**不许出现绝对帧号**（一律 `SHOTS[shot].from + offset` 派生）。
 - 改了镜头时长/顺序 → **SFX 全表重钉**（`audio.ts`），音画错位是交付前必查项。
 - 不新增 npm 依赖。
+
+## 许可
+
+代码以 [MIT](LICENSE) 发布。**素材不在此列**，各自沿用原许可：
+
+- `public/textures/**`：Spore 三端产品的界面截图（数据全虚构），界面版权随对应仓库。
+- `public/audio/sfx/**`：Freesound，CC0 / CC BY，逐条见 `public/audio/sfx/FREESOUND-CREDITS.md`。
+- `public/audio/bgm/house-vibez.mp3`：Mixkit，见 `public/audio/BGM-ATTRIBUTION.md`。
+- `src/lib/PageCam.tsx` 等沿用 video-shotcraft 模板（Apache-2.0）。
+- 渲染引擎 Remotion 有自己的许可（个人与小团队免费，商业用途可能需要授权）。
