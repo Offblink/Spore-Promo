@@ -141,3 +141,5 @@ npm run dev        :: = remotion studio src/index.ts，浏览器里逐镜头预�
 - `public/audio/bgm/house-vibez.mp3`：Mixkit，见 `public/audio/BGM-ATTRIBUTION.md`。
 - `src/lib/PageCam.tsx` 等沿用 video-shotcraft 模板（Apache-2.0）。
 - 渲染引擎 Remotion 有自己的许可（个人与小团队免费，商业用途可能需要授权）。
+
+逐条清单见 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。
