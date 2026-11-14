@@ -1,0 +1,118 @@
+{
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "durationInFrames": 2100,
+  "shots": [
+    {
+      "id": "S1",
+      "from": 0,
+      "dur": 210,
+      "card": "crash-zoom-punch",
+      "styleKey": "crash-zoom-punch",
+      "caption": "一道题在屏幕上。",
+      "captions": [
+        { "from": 0, "dur": 90, "text": "一道题在屏幕上。" },
+        { "from": 96, "dur": 114, "text": "你切了几次屏？" }
+      ],
+      "demo": "demos/camera/crash-zoom-punch/CrashZoomReal.tsx",
+      "texture": "capture/assets/question.png + ext-drawer.png",
+      "crop": "ext-drawer.png / x 1020..1440, y 0..900 (ext-drawer-panel); verify x 1049..1424, y 293.7..451"
+    },
+    {
+      "id": "S2",
+      "from": 210,
+      "dur": 300,
+      "card": "row-embed",
+      "styleKey": "row-embed",
+      "caption": "同一个 Spore，三个地方。",
+      "captions": [
+        { "from": 230, "dur": 280, "text": "同一个 Spore，三个地方。" }
+      ],
+      "demo": "demos/ui-entrance/row-embed/RowEmbed.tsx",
+      "texture": "ext-drawer.png + mob-record.png + gui-records@2x.png",
+      "crop": "ext-drawer.png x 1020..1440 / mob-record.png x 0..360, y 61..800 / gui-records@2x.png full"
+    },
+    {
+      "id": "S3",
+      "from": 510,
+      "dur": 420,
+      "card": "type-and-filter + list-reveal",
+      "styleKey": "type-and-filter",
+      "styleKeySecondary": "list-reveal",
+      "caption": "按科目收好。",
+      "captions": [
+        { "from": 520, "dur": 120, "text": "按科目收好。" },
+        { "from": 650, "dur": 110, "text": "按收藏挑出来。" },
+        { "from": 800, "dur": 130, "text": "想追问，就在原题上问。" }
+      ],
+      "demo": "demos/interaction/type-and-filter/TypeAndFilter.tsx",
+      "demoSecondary": "demos/ui-entrance/list-reveal/ListReveal.tsx",
+      "texture": "ext-review-default.png",
+      "crop": "left x 280..551, y 54..900 | detail-content x 456..1264, y 54..783 | verify x 470..1264, y 305.9..443.4"
+    },
+    {
+      "id": "S4",
+      "from": 930,
+      "dur": 360,
+      "card": null,
+      "styleKey": "recorded-cam",
+      "caption": "手机拍完，电脑上接着看。",
+      "captions": [
+        { "from": 940, "dur": 150, "text": "手机拍完，电脑上接着看。" },
+        { "from": 1160, "dur": 130, "text": "扫一下，两边是一套记录。" }
+      ],
+      "demo": null,
+      "note": "竖屏纹理嵌横屏，PhoneCam 推拉 + 页面内滚动；不套用镜头卡",
+      "texture": "mob-record.png + mob-record-select.png + mob-settings-sync.png + gui-records@2x.png + gui-records-select@2x.png",
+      "crop": "mob-record.png x 0..360, y 61..800 | batchbar y 738..800 | sync x 37..323, y 211..275 | gui-records@2x.png full -> gui-records-select@2x.png full"
+    },
+    {
+      "id": "S5",
+      "from": 1290,
+      "dur": 450,
+      "card": "list-reveal",
+      "styleKey": "list-reveal",
+      "caption": "它要你自己的 API Key。",
+      "captions": [
+        { "from": 1300, "dur": 108, "text": "它要你自己的 API Key。" },
+        { "from": 1418, "dur": 122, "text": "因为模型该由你选，不该由平台替你选。" },
+        { "from": 1550, "dur": 90, "text": "按次计，不包月。你用多少，付多少。" },
+        { "from": 1650, "dur": 90, "text": "通用助手回答完就走；Spore 把题留下。" }
+      ],
+      "demo": "demos/ui-entrance/list-reveal/ListReveal.tsx",
+      "note": "换尺度复用：6 项侧边栏 -> 20+ 行整屏墙，纵深靠层间速度差与 --bg2 薄雾",
+      "texture": "ext-review-default.png / ext-review-fav.png / ext-review-batch.png / ext-review-subject.png 的行级裁片",
+      "crop": "rows 263x64 each, e.g. x 288..551, y 156..220"
+    },
+    {
+      "id": "S6",
+      "from": 1740,
+      "dur": 360,
+      "card": "ui-strip-away-outro",
+      "styleKey": "ui-strip-away-outro",
+      "caption": "题在屏幕上，答案在旁边，记录在手里。",
+      "captions": [
+        { "from": 1860, "dur": 240, "text": "题在屏幕上，答案在旁边，记录在手里。" }
+      ],
+      "demo": "demos/outro/ui-strip-away-outro/UiStripAwayOutro.tsx",
+      "smallPrint": [
+        { "from": 1890, "dur": 210, "text": "扩展 · Android · Windows" },
+        { "from": 1920, "dur": 180, "text": "github.com/Offblink/Spore" }
+      ],
+      "texture": "ext-review-default.png",
+      "crop": "survivor row x 288..551, y 156..220"
+    }
+  ],
+  "checks": {
+    "durSum": 2100,
+    "durationInFrames": 2100,
+    "contiguous": true,
+    "lastFrame": 2100
+  },
+  "slamBudget": {
+    "allowed": 3,
+    "used": 2,
+    "where": ["S1 crash-zoom-punch 落点", "S5 第一句行落定"]
+  }
+}

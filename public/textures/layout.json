@@ -1,0 +1,203 @@
+{
+  "pages": {
+    "ext-review-default": {
+      "file": "ext-review-default.png",
+      "pageW": 1440,
+      "pageH": 900,
+      "dpr": 2
+    },
+    "ext-review-fav": {
+      "file": "ext-review-fav.png",
+      "pageW": 1440,
+      "pageH": 900,
+      "dpr": 2
+    },
+    "ext-review-batch": {
+      "file": "ext-review-batch.png",
+      "pageW": 1440,
+      "pageH": 900,
+      "dpr": 2
+    },
+    "ext-review-subject": {
+      "file": "ext-review-subject.png",
+      "pageW": 1440,
+      "pageH": 900,
+      "dpr": 2
+    },
+    "ext-options": {
+      "file": "ext-options.png",
+      "pageW": 1440,
+      "pageH": 900,
+      "dpr": 2
+    },
+    "ext-drawer-closed": {
+      "file": "ext-drawer-closed.png",
+      "pageW": 1440,
+      "pageH": 900,
+      "dpr": 2
+    },
+    "ext-drawer": {
+      "file": "ext-drawer.png",
+      "pageW": 1440,
+      "pageH": 900,
+      "dpr": 2
+    },
+    "mob-record": {
+      "file": "mob-record.png",
+      "pageW": 360,
+      "pageH": 800,
+      "dpr": 3
+    },
+    "mob-record-select": {
+      "file": "mob-record-select.png",
+      "pageW": 360,
+      "pageH": 800,
+      "dpr": 3
+    },
+    "mob-panel": {
+      "file": "mob-panel.png",
+      "pageW": 360,
+      "pageH": 800,
+      "dpr": 3
+    },
+    "mob-main": {
+      "file": "mob-main.png",
+      "pageW": 360,
+      "pageH": 800,
+      "dpr": 3
+    },
+    "mob-settings-sync": {
+      "file": "mob-settings-sync.png",
+      "pageW": 360,
+      "pageH": 800,
+      "dpr": 3
+    },
+    "gui-records": {
+      "file": "gui-records@2x.png",
+      "pageW": 1440,
+      "pageH": 900,
+      "dpr": 2
+    }
+  },
+  "elements": {
+    "ext-row-1": {
+      "page": "ext-review-default",
+      "x": 30.0,
+      "y": 156.3,
+      "w": 241.0,
+      "h": 63.1
+    },
+    "ext-subject-1": {
+      "page": "ext-review-default",
+      "x": 8.0,
+      "y": 109.0,
+      "w": 263.0,
+      "h": 42.3
+    },
+    "ext-detail": {
+      "page": "ext-review-default",
+      "x": 280.0,
+      "y": 54.0,
+      "w": 1160.0,
+      "h": 775.0
+    },
+    "ext-detail-content": {
+      "page": "ext-review-default",
+      "x": 456.0,
+      "y": 54.0,
+      "w": 808.0,
+      "h": 729.0
+    },
+    "ext-verify": {
+      "page": "ext-review-default",
+      "x": 470.0,
+      "y": 305.9,
+      "w": 794.0,
+      "h": 137.5
+    },
+    "ext-options-card-1": {
+      "page": "ext-options",
+      "x": 240.0,
+      "y": 34.0,
+      "w": 1160.0,
+      "h": 188.6
+    },
+    "ext-drawer-panel": {
+      "page": "ext-drawer",
+      "x": 1020.0,
+      "y": 0.0,
+      "w": 420.0,
+      "h": 900.0
+    },
+    "ext-drawer-content": {
+      "page": "ext-drawer",
+      "x": 1021.0,
+      "y": 59.0,
+      "w": 419.0,
+      "h": 770.0
+    },
+    "ext-drawer-verify": {
+      "page": "ext-drawer",
+      "x": 1049.0,
+      "y": 293.7,
+      "w": 375.0,
+      "h": 157.3
+    },
+    "mob-row-1": {
+      "page": "mob-record",
+      "x": 12.0,
+      "y": 178.2,
+      "w": 336.0,
+      "h": 75.8
+    },
+    "mob-chips": {
+      "page": "mob-record",
+      "x": 0.0,
+      "y": 116.1,
+      "w": 360.0,
+      "h": 52.1
+    },
+    "mob-topbar": {
+      "page": "mob-record",
+      "x": 0.0,
+      "y": 0.0,
+      "w": 360.0,
+      "h": 61.0
+    },
+    "mob-batchbar": {
+      "page": "mob-record-select",
+      "x": 0.0,
+      "y": 736.1,
+      "w": 360.0,
+      "h": 63.9
+    },
+    "mob-panel-stream": {
+      "page": "mob-panel",
+      "x": 0.0,
+      "y": 61.0,
+      "w": 360.0,
+      "h": 671.5
+    },
+    "mob-main-ball": {
+      "page": "mob-main",
+      "x": 24.0,
+      "y": 472.0,
+      "w": 312.0,
+      "h": 56.0
+    },
+    "mob-photo-btn": {
+      "page": "mob-main",
+      "x": 24.0,
+      "y": 540.0,
+      "w": 312.0,
+      "h": 53.2
+    },
+    "mob-sync": {
+      "page": "mob-settings-sync",
+      "x": 33.0,
+      "y": 1414.4,
+      "w": 294.0,
+      "h": 66.7
+    }
+  }
+}

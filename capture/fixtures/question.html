@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>练习 · 极限计算</title>
+<style>
+  :root {
+    --ink: #1a1d2e; --muted: #6f7590; --line: #e6e8f2; --bg: #f7f8fc;
+    --accent: #ec4899; --paper: #ffffff;
+  }
+  * { box-sizing: border-box }
+  html, body { margin: 0; padding: 0 }
+  body {
+    background: var(--bg); color: var(--ink);
+    font: 16px/1.75 "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page { max-width: 780px; margin: 0 auto; padding: 56px 40px 96px }
+  .crumb { font-size: 13px; color: var(--muted); letter-spacing: .02em; margin-bottom: 18px }
+  .crumb b { color: #4a4f6b; font-weight: 600 }
+  .paper {
+    background: var(--paper); border: 1px solid var(--line); border-radius: 18px;
+    padding: 38px 40px 34px; box-shadow: 0 8px 34px rgba(20, 24, 48, .06);
+  }
+  h1 { font-size: 21px; font-weight: 700; margin: 0 0 4px; letter-spacing: .01em }
+  .meta { font-size: 12.5px; color: var(--muted); margin-bottom: 26px }
+  .tag {
+    display: inline-block; font-size: 12px; color: #b4316d; background: #fff0f7;
+    border: 1px solid #fbd0e3; border-radius: 999px; padding: 1px 10px; margin-right: 8px;
+  }
+  .qno { font-size: 13px; color: var(--accent); font-weight: 700; letter-spacing: .06em }
+  .stem { font-size: 19px; line-height: 1.9; margin: 6px 0 26px }
+  .stem .fx { font-family: "Cambria Math", "Times New Roman", serif; font-style: italic; font-size: 21px }
+  .frac { display: inline-block; vertical-align: middle; text-align: center; font-size: 15px; margin: 0 2px }
+  .frac .num { display: block; padding: 0 4px; border-bottom: 1.4px solid var(--ink) }
+  .frac .den { display: block; padding: 0 4px }
+  ol.opts { list-style: none; margin: 0; padding: 0 }
+  ol.opts li {
+    display: flex; align-items: baseline; gap: 12px;
+    border: 1px solid var(--line); border-radius: 12px; padding: 13px 16px; margin-bottom: 10px;
+  }
+  ol.opts li .k {
+    flex: none; width: 24px; height: 24px; border-radius: 50%; background: #f2f4fb;
+    color: #5b6180; font-size: 13px; font-weight: 700; text-align: center; line-height: 24px;
+  }
+  ol.opts li .v { font-family: "Cambria Math", "Times New Roman", serif; font-size: 17px }
+  ol.opts li.chosen { border-color: #f7c8da; background: #fff8fc }
+  ol.opts li.chosen .k { background: var(--accent); color: #fff }
+  .trace {
+    margin-top: 30px; border-top: 1px dashed var(--line); padding-top: 22px;
+  }
+  .trace h2 {
+    font-size: 12.5px; letter-spacing: .16em; text-transform: uppercase;
+    color: #9aa0bb; font-weight: 600; margin: 0 0 12px;
+  }
+  .trace .step { display: flex; gap: 12px; margin-bottom: 12px; font-size: 15px; color: #3d4260 }
+  .trace .step .n {
+    flex: none; width: 20px; height: 20px; border-radius: 6px; background: #f2f4fb;
+    color: #7c819c; font-size: 11.5px; font-weight: 700; text-align: center; line-height: 20px;
+    margin-top: 3px;
+  }
+  .trace .eq {
+    font-family: "Cambria Math", "Times New Roman", serif; font-size: 17px;
+    color: #14172a; margin: 2px 0 0;
+  }
+  .note { font-size: 13.5px; color: var(--muted); margin-top: 18px }
+  .foot { margin-top: 22px; font-size: 12.5px; color: #a3a8c2; text-align: right }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="crumb">题库练习 / <b>高等数学</b> / 第一章 极限与连续</div>
+
+  <div class="paper">
+    <h1>极限的计算（基础巩固）</h1>
+    <div class="meta">
+      <span class="tag">单选题</span>
+      <span class="tag">难度 中</span>
+      建议用时 2 分钟
+    </div>
+
+    <div class="qno">第 7 题</div>
+    <div class="stem">
+      求极限
+      <span class="fx">
+        lim<sub>x→0</sub>
+        <span class="frac"><span class="num">sin 3x</span><span class="den">2x</span></span>
+      </span>
+      的值为（）
+    </div>
+
+    <ol class="opts">
+      <li class="chosen"><span class="k">A</span><span class="v">3 / 2</span></li>
+      <li><span class="k">B</span><span class="v">2 / 3</span></li>
+      <li><span class="k">C</span><span class="v">0</span></li>
+    </ol>
+
+    <div class="trace">
+      <h2>我的解题痕迹</h2>
+
+      <div class="step">
+        <span class="n">1</span>
+        <div>
+          先判型：分子 → 0，分母 → 0，属于 0/0 型，可以用等价无穷小。
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="n">2</span>
+        <div>
+          当 x → 0 时，sin 3x ~ 3x，代回原式：
+          <p class="eq">sin 3x / (2x)  ~  3x / (2x)  =  3/2</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="n">3</span>
+        <div>
+          复核：用洛必达，分子求导得 3cos 3x，分母求导得 2，
+          代入 x = 0 仍是 3/2，两种方法一致。
+        </div>
+      </div>
+
+      <div class="note">
+        易错点：等价无穷小替代只在乘除结构里成立；加减结构要先通分或提公因式。
+      </div>
+    </div>
+
+    <div class="foot">— 已作答，用时 1 分 12 秒 —</div>
+  </div>
+</div>
+</body>
+</html>

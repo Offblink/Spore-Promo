@@ -1,0 +1,16 @@
+# 依赖与产物
+node_modules/
+public/out/*
+!public/out/v2/
+public/out/v2/*
+!public/out/v2/spore-v2-final.mp4
+_seg/
+_patch/
+_patch-nobgm/
+*.log
+
+# 采集用的浏览器 profile / 日志（含本地 cookie，绝不入库）
+capture/_profile_ext/
+capture/_profile_mob/
+capture/_log/
+_sfsearch/

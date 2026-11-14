@@ -1,0 +1,295 @@
+{
+  "_note": "三端（扩展 / 手机 WebView / 桌面 GUI）共用同一份演示数据。全部内容为虚构，不含真实 key、账号、路径、邮箱、手机号。模型名一律「演示模型」。",
+  "model": "演示模型",
+  "subjects": [
+    { "id": "sub-math", "name": "高数" },
+    { "id": "sub-la", "name": "线代" },
+    { "id": "sub-en", "name": "英语" }
+  ],
+  "sessions": [
+    {
+      "id": "sess-001",
+      "title": "第7题 求极限",
+      "sub": "sub-math",
+      "fav": true,
+      "when": "09-27 14:32",
+      "count": 3,
+      "status": "idle",
+      "unread": false,
+      "messages": [
+        { "role": "user", "text": "题目：lim(x→0) sin3x / (2x) = ?" },
+        {
+          "kind": "answer",
+          "no": 7,
+          "ans": "$$\\lim_{x\\to 0}\\frac{\\sin 3x}{2x}=\\frac{3}{2}$$",
+          "why": "用等价无穷小：当 $x\\to 0$ 时 $\\sin 3x \\sim 3x$，代回即得 $\\dfrac{3x}{2x}=\\dfrac{3}{2}$。等价无穷小替代只在**乘除**结构里成立，加减结构要先通分或提公因式。",
+          "think": "先看是否 0/0；分子 sin3x 在 0 附近等价 3x，分母 2x，约掉 x 得 3/2。",
+          "verify": {
+            "ran": true,
+            "verdict": "FIX",
+            "note": "初答写成了 $\\dfrac{3}{2}$ 但漏了极限符号，且来源把「等价无穷小」记成了「洛必达」。已按教材口径改正：等价无穷小替换 + 保留 $\\lim$ 记号。",
+            "think": "对照两条常见错法：①忘记先判型；②对 sin3x 直接求导（洛必达也能做，但 3cos3x/2 → 3/2，结论相同、过程更重）。"
+          },
+          "tools": ["检索：等价无穷小 常用公式表", "核对：sin3x 在 x→0 的等价量"]
+        },
+        {
+          "kind": "answer",
+          "no": 8,
+          "ans": "**结论**：原式 = 3/2，与初答一致。",
+          "why": "同一题用洛必达复核：$\\dfrac{d}{dx}\\sin 3x = 3\\cos 3x$，$\\dfrac{d}{dx}2x = 2$，故极限为 $\\dfrac{3\\cos 0}{2}=\\dfrac{3}{2}$。\n\n| 方法 | 过程 | 结果 |\n|---|---|---|\n| 等价无穷小 | $\\sin 3x\\sim 3x$ | 3/2 |\n| 洛必达 | $3\\cos 3x / 2$ | 3/2 |\n| 泰勒展开 | $3x-\\frac{9}{2}x^3+\\cdots$ 除以 $2x$ | 3/2 |",
+          "verify": {
+            "ran": true,
+            "verdict": "OK",
+            "note": "三种方法互验一致，未发现错误。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sess-002",
+      "title": "矩阵的秩怎么求",
+      "sub": "sub-la",
+      "fav": true,
+      "when": "09-27 14:05",
+      "count": 2,
+      "status": "idle",
+      "unread": false,
+      "messages": [
+        { "role": "user", "text": "题目：求矩阵 A = [[1,2,3],[2,4,6],[1,1,1]] 的秩。" },
+        {
+          "kind": "answer",
+          "no": 3,
+          "ans": "秩 r(A) = 2。",
+          "why": "对 A 作初等行变换：第 2 行 − 2×第 1 行得全零，说明第 2 行是第 1 行的倍数；剩下 $\\begin{pmatrix}1&2&3\\\\1&1&1\\end{pmatrix}$ 两行不成比例，故非零行数为 2。",
+          "think": "先看行向量是否线性相关：r2 = 2·r1，直接消掉。",
+          "verify": {
+            "ran": true,
+            "verdict": "OK",
+            "note": "行变换过程与结论均正确。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sess-003",
+      "title": "定积分换元",
+      "sub": "sub-math",
+      "fav": false,
+      "when": "09-27 13:48",
+      "count": 1,
+      "status": "idle",
+      "unread": true,
+      "messages": [
+        { "role": "user", "text": "题目：∫₀¹ x·e^(x²) dx = ?" },
+        {
+          "kind": "answer",
+          "no": 12,
+          "ans": "$$\\int_0^1 x e^{x^2}\\,dx=\\frac{e-1}{2}$$",
+          "why": "令 $t=x^2$，则 $dt=2x\\,dx$，原式 $=\\dfrac12\\int_0^1 e^{t}dt=\\dfrac{e-1}{2}$。",
+          "think": "看到 x·e^(x²)，x 正好是 x² 的导数的一半，换元最省。",
+          "verify": {
+            "skipped": true,
+            "note": "初答自评确定（换元后是标准指数积分，无需外部核对）。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sess-004",
+      "title": "特征值怎么算",
+      "sub": "sub-la",
+      "fav": false,
+      "when": "09-26 21:10",
+      "count": 1,
+      "status": "idle",
+      "unread": false,
+      "messages": [
+        { "role": "user", "text": "题目：A = [[2,1],[1,2]]，求特征值。" },
+        {
+          "kind": "answer",
+          "no": 5,
+          "ans": "λ₁ = 3，λ₂ = 1。",
+          "why": "特征方程 $\\det(A-\\lambda I)=(2-\\lambda)^2-1=0$，解得 $\\lambda=2\\pm 1$。",
+          "think": "对称矩阵，两行和都是 3，所以 3 一定是特征值，另一个由迹 4 得 1。",
+          "verify": {
+            "skipped": true,
+            "note": "初答自评确定（2×2 手算可完全验算）。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sess-005",
+      "title": "虚拟语气三道",
+      "sub": "sub-en",
+      "fav": false,
+      "when": "09-26 20:44",
+      "count": 3,
+      "status": "idle",
+      "unread": false,
+      "messages": [
+        { "role": "user", "text": "题目：If I ___ (be) you, I would accept the offer." },
+        {
+          "kind": "answer",
+          "no": 1,
+          "ans": "were",
+          "why": "与现在事实相反的虚拟条件句：if 从句用过去式，be 动词一律用 were。",
+          "think": "看到 would + 动词原形，可反推从句是虚拟语气。",
+          "verify": {
+            "ran": true,
+            "verdict": "OK",
+            "note": "语法书口径一致：正式书面语中 if I were 为唯一正确形式。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sess-006",
+      "title": "从句练习",
+      "sub": "sub-en",
+      "fav": false,
+      "when": "09-25 19:02",
+      "count": 2,
+      "status": "idle",
+      "unread": false,
+      "messages": [
+        { "role": "user", "text": "题目：The book ___ I bought yesterday is very useful." },
+        {
+          "kind": "answer",
+          "no": 2,
+          "ans": "that / which",
+          "why": "先行词 the book 指物，关系代词在从句中作 bought 的宾语，that 与 which 均可，且可省略。",
+          "think": "先判断从句缺什么成分：bought 缺宾语 → 用关系代词。",
+          "verify": {
+            "skipped": true,
+            "note": "初答自评确定。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sess-007",
+      "title": "极限的等价无穷小",
+      "sub": "sub-math",
+      "fav": false,
+      "when": "09-25 16:20",
+      "count": 1,
+      "status": "idle",
+      "unread": false,
+      "messages": [
+        { "role": "user", "text": "题目：x→0 时 1−cos x 的等价无穷小是什么？" },
+        {
+          "kind": "answer",
+          "no": 4,
+          "ans": "$\\dfrac{x^2}{2}$",
+          "why": "由 $1-\\cos x = 2\\sin^2\\dfrac{x}{2}$，而 $\\sin\\dfrac{x}{2}\\sim\\dfrac{x}{2}$，故 $1-\\cos x\\sim 2\\cdot\\dfrac{x^2}{4}=\\dfrac{x^2}{2}$。",
+          "think": "半角公式最稳，不会记错系数。",
+          "verify": {
+            "ran": true,
+            "verdict": "OK",
+            "note": "推导与常见表一致。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sess-008",
+      "title": "天空为什么是蓝的",
+      "sub": null,
+      "fav": false,
+      "when": "09-27 13:48",
+      "count": 1,
+      "status": "idle",
+      "unread": false,
+      "messages": [
+        { "role": "user", "text": "题目：天空为什么是蓝色的？" },
+        {
+          "kind": "answer",
+          "no": 1,
+          "ans": "因为瑞利散射对短波长的散射强度更高。",
+          "why": "散射强度与波长四次方成反比（$I \\propto 1/\\lambda^4$），蓝紫光被散射得远比红光强；人眼对紫光不敏感，且部分紫光被高层大气吸收，所以天空呈蓝色。",
+          "think": "先想到散射，再确认是瑞利散射而非米氏散射。",
+          "verify": {
+            "ran": true,
+            "verdict": "OK",
+            "note": "结论正确，系数关系与教科书一致。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sess-009",
+      "title": "条件概率怎么算",
+      "sub": null,
+      "fav": false,
+      "when": "09-27 11:26",
+      "count": 1,
+      "status": "idle",
+      "unread": false,
+      "messages": [
+        { "role": "user", "text": "题目：P(A|B) 怎么算？" },
+        {
+          "kind": "answer",
+          "no": 2,
+          "ans": "$P(A\\mid B)=\\dfrac{P(A\\cap B)}{P(B)}$，要求 $P(B)>0$。",
+          "why": "把样本空间压缩到 B 内，再看 A 在里面占多大比例。",
+          "think": "定义式直接写，注意分母不能为 0。",
+          "verify": {
+            "skipped": true,
+            "note": "初答自评确定。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sess-010",
+      "title": "泰勒展开的余项",
+      "sub": null,
+      "fav": false,
+      "when": "09-26 22:03",
+      "count": 1,
+      "status": "idle",
+      "unread": false,
+      "messages": [
+        { "role": "user", "text": "题目：泰勒公式的拉格朗日余项怎么写？" },
+        {
+          "kind": "answer",
+          "no": 3,
+          "ans": "$R_n(x)=\\dfrac{f^{(n+1)}(\\xi)}{(n+1)!}(x-x_0)^{n+1}$，$\\xi$ 介于 $x_0$ 与 $x$ 之间。",
+          "why": "本质是反复用中值定理把误差项逼成一个导数在某中间点的取值。",
+          "think": "记住 (n+1)! 和 n+1 次方，位置在 x0 与 x 之间。",
+          "verify": {
+            "ran": true,
+            "verdict": "OK",
+            "note": "形式正确（拉格朗日型）。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sess-011",
+      "title": "洛必达的使用条件",
+      "sub": null,
+      "fav": false,
+      "when": "09-26 18:37",
+      "count": 1,
+      "status": "idle",
+      "unread": false,
+      "messages": [
+        { "role": "user", "text": "题目：什么时候不能用洛必达法则？" },
+        {
+          "kind": "answer",
+          "no": 6,
+          "ans": "不是 0/0 或 ∞/∞ 型、求导后极限不存在（且非无穷）、以及求导后震荡不收敛时都不能用。",
+          "why": "洛必达只保证「若导数之比的极限存在，则原极限等于它」，反向不成立。反例：$\\dfrac{x+\\sin x}{x}$ 在 $x\\to\\infty$ 时，导数之比 $\\dfrac{1+\\cos x}{1}$ 震荡，但原式极限为 1。",
+          "think": "先判型，再看导数之比是否真的收敛。",
+          "verify": {
+            "ran": true,
+            "verdict": "FIX",
+            "note": "初答漏了「求导后震荡」这一条，已补上并用反例说明。"
+          }
+        }
+      ]
+    }
+  ]
+}
